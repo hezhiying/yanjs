@@ -16,12 +16,12 @@
     /**
      * 依赖加载方法
      * @param files array|json|string  文件别名或URL(如果配制文件没有对应的文件则当成全路径URL加载)
-     * 1:requirejs('jquery',function(){}); 或 requirejs('jquery|jquery-plugin',function(){}); | 意思为这几个文件要按照顺序加载下雷同
-     * 2:requirejs(['vue','jquery','iscroll-zoom|photoClip'],function(){});
-     * 3:requirejs({vue:function(){},jquery:function(){},'iscroll-zoom|photoClip':function(){}});
+     * 1:yanjs('jquery',function(){}); 或 yanjs('jquery|jquery-plugin',function(){}); | 意思为这几个文件要按照顺序加载下雷同
+     * 2:yanjs(['vue','jquery','iscroll-zoom|photoClip'],function(){});
+     * 3:yanjs({vue:function(){},jquery:function(){},'iscroll-zoom|photoClip':function(){}});
      * @param callback object    回调方法 在文件列表最后一个加完成时才进行回调,所以把要先加载插件写在前面
      */
-    function requirejs( files, callback ) {
+    function yanjs( files, callback ) {
         //剩余加载数量
         var load_count = 0;
         //是否开启最后加载, 开启后要等所有文件加载完成,才触发回调,必免依赖出错
